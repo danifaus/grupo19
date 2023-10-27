@@ -277,7 +277,7 @@ header input:checked ~ nav a {
 .workingContainer{
   background:no-repeat url('/img/workProgress.png');
   background-position:center;
-  height:50vh;
+  height:30vh;
 }
 .loadingContainer{
   background:no-repeat url('/img/pacmanLoading.svg');
