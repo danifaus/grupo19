@@ -4,16 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=the, initial-scale=1.0" />
     <title>The makers home</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/c58aa94ed9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <header>
+      <div class="headerTitle">
+        <a href="/index.html">The Makers Home</a>
+      </div>
+      <input type="checkbox" id="check">
       <nav>
-        <a href="../index.html">Home</a>
-        <a href="quienessomos.html">Quienes somos</a>
-        <a href="../pages/trabajosrealizados.html">Trabajos Realizados</a>
-        <a href="../pages/contacto.html">contacto</a>
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/pages/quienessomos.html">Nosotros</a>
+          </li>
+          <li class="active">
+            <a href="/pages/trabajosrealizados.html">Servicios</a>
+          </li>
+          <li>
+            <a href="/pages/tienda.html">Tienda</a>
+          </li>
+          <li>
+            <a href="/pages/form.html">Contacto</a>
+          </li>
+        </ul>
       </nav>
+      <label for="check">
+        <span></span>
+      </label>
     </header>
 
     <article>
@@ -30,25 +52,25 @@
         somos fabricantes de hogares.
       </p>
       <img
-        src="../img/recibidor.jpg"
+        src="../img/trabajosRealizados/recibidor.jpg"
         alt="quienes somos"
         width="500px"
         height="300"
       />
       <img
-        src="../img/living.jpg"
+        src="../img/trabajosRealizados/living.jpg"
         alt="quienes somos"
         width="500px"
         height="300"
       />
       <img
-      src="../img/comedor.jpeg"
+      src="../img/trabajosRealizados/comedor.jpeg"
       alt="quienes somos"
       width="500px"
       height="300"
        />
        <img
-       src="../img/vuelan.jpg"
+       src="../img/trabajosRealizados/vuelan.jpg"
        alt="quienes somos"
        width="500px"
        height="300"
@@ -71,9 +93,22 @@
       
     </article>
 
-    <footer>
-      <a href=""><img src="../img/fblogo.png" alt="facebook" /></a>
-      <a href=""><img src="../img/instalogo.png" alt="instagram" /></a>
+    <footer class="footerContainer">
+      <div class="footerLinks">
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      <div class="footerCopy">
+        <p>&copy; 2023 <a href="/index.html">TheMakersHome</a>. All rights reserved. Designed by Grupo 19 </a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
