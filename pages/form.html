@@ -3,29 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Responsive</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .input-group input, .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #7b9e89;
+        }
+
+        .input-group button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .input-group button:hover {
+            background-color: #45a049;
+        }
+
+        @media (min-width: 600px) {
+            .container {
+                width: 97%;
+            }
+
+            .input-group input, .input-group textarea {
+                width: 100%;
+            }
+
+            .input-group button {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <script>
+        function validateForm() {
+
+            let nombre = document.forms["decoracion"]["fname"].value;
+            if (nombre == "") {
+                alert("Por favor ingrese su nombre");
+                return false;
+            }
+
+            let apellido = document.forms["decoracion"]["lname"].value;
+            if (apellido == "") {
+                alert("Por favor ingrese su apellido");
+                return false;
+            }
+
+            let telefono = document.forms["decoracion"]["phone"].value;
+            if (telefono == "") {
+                alert("Por favor ingrese su teléfono de contacto");
+                return false;
+            }
+
+            let mail = document.forms["decoracion"]["email"].value;
+            if (mail == "") {
+                alert("Por favor ingrese su dirección de email");
+                return false;
+            }
+
+            var validEmail =  /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+
+            if( !validEmail.test(mail) ){
+                alert('Email inválido, por favor ingrese de nuevo');
+                return false;
+            }
+    
+        }
+        </script>
 </head>
 <body>
-    <h1>Contactate con nosotros</h1>
-    <h2>Dejanos tus datos y nos comunicaremos</h2>
-    <form action="">
-        <label for="fname">Nombre:</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Apellido:</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="phone">Teléfono</label><br>
-        <input type="tel" id="phone" name="input-tel"><br>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="mensaje">Dejanos tu mensaje:</label><br>
-        <textarea name="messaje" id="mensaje" cols="30" rows="10">Inserte su comentario</textarea><br>
-        <input type="submit">
-        <input type="reset">
+    <div class="container">
+        <h1>Contactate con nosotros</h1>
+        <h2>Dejanos tus datos y nos comunicaremos</h2>
+        <form action="" name="decoracion" onsubmit="return validateForm()" method="get">
+            <div class="input-group">
+                <label for="fname">Nombre:</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="fname" name="fname">
+            </div>
+            <div class="input-group">
+                <label for="lname">Apellido:</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="lname" name="lname">
+            </div>
+            <div class="input-group">
+                <label for="phone">Teléfono</label>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="phone" name="input-tel">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="input-group">
+                <label for="mensaje">Dejanos tu mensaje:</label>
+            </div>
+            <div class="input-group">
+                <textarea name="messaje" id="mensaje" cols="30" rows="10">Inserte su comentario</textarea>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="btms">Enviar</button>
+                <input type="reset" class="btms">
+            </div>
 
-    </form>
-
-
-
-
+        </form>
+    </div>
 </body>
 </html>
