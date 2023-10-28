@@ -7,4 +7,12 @@ body {
 
   background-color: rgb(204, 232, 225);
 
-  margin: auto 20px;}
+}
+
+.content{
+  margin: auto 20px
+}
+
+.force-top{
+  height: 120px;
+}
