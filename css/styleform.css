@@ -15,6 +15,7 @@ body {
     border-radius: 5px;
     margin-top: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-top: solid white 60px;
 }
 
 .input-group {
@@ -50,6 +51,10 @@ body {
 
 .input-group button:hover {
     background-color: #45a049;
+}
+
+.form header{
+    margin-top: -50px;
 }
 
 @media (min-width: 600px) {
